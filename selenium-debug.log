@@ -1,0 +1,30 @@
+17:03:10.866 INFO - Launching a standalone Selenium Server
+Setting system property webdriver.chrome.driver to /Users/soho/Desktop/shen/test1/t1/node_modules/.npminstall/chromedriver/2.21.2/chromedriver/lib/chromedriver/chromedriver
+17:03:10.904 INFO - Java: Oracle Corporation 25.40-b25
+17:03:10.904 INFO - OS: Mac OS X 10.10.1 x86_64
+17:03:10.913 INFO - v2.53.0, with Core v2.53.0. Built from revision 35ae25b
+17:03:10.992 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+17:03:10.992 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+17:03:10.993 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+17:03:10.993 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+17:03:10.995 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+17:03:10.995 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+17:03:11.076 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+17:03:11.076 INFO - Selenium Server is up and running
+17:03:11.473 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+17:03:11.483 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 22611
+Only local connections are allowed.
+17:03:12.588 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+17:03:12.603 INFO - Executing: [get: http://localhost:8080])
+17:03:15.813 INFO - Done: [get: http://localhost:8080]
+17:03:15.822 INFO - Executing: [find elements: By.cssSelector: #app])
+17:03:15.855 INFO - Done: [find elements: By.cssSelector: #app]
+17:03:15.859 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (76961df53eb6b5c0a8b35c916803de53)] -> css selector: #app]])
+17:03:15.878 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (76961df53eb6b5c0a8b35c916803de53)] -> css selector: #app]]
+17:03:15.884 INFO - Executing: [find elements: By.cssSelector: .logo])
+17:03:15.901 INFO - Done: [find elements: By.cssSelector: .logo]
+17:03:15.907 INFO - Executing: [delete session: bb1c32e3-bdba-44dd-8664-b7ebb93664b2])
+17:03:15.980 INFO - Done: [delete session: bb1c32e3-bdba-44dd-8664-b7ebb93664b2]
