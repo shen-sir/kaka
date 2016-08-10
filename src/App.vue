@@ -1,25 +1,14 @@
 <template>
   <div id="app">
-    <!-- <img class="logo" src="./assets/logo.png"> -->
-    <hello></hello>
-     <!-- <test></test> -->
-    <p>
-      Welcome to your Vue.js app!
-    </p>
-    <p>
-      To get a better understanding of how this boilerplate works, check out
-      <a href="http://vuejs-templates.github.io/webpack" target="_blank">its documentation</a>.
-      It is also recommended to go through the docs for
-      <a href="http://webpack.github.io/" target="_blank">Webpack</a> and
-      <a href="http://vuejs.github.io/vue-loader/" target="_blank">vue-loader</a>.
-      If you have any issues with the setup, please file an issue at this boilerplate's
-      <a href="https://github.com/vuejs-templates/webpack" target="_blank">repository</a>.
-    </p>
-    <p>
-      You may also want to checkout
-      <a href="https://github.com/vuejs/vue-router/" target="_blank">vue-router</a> for routing and
-      <a href="https://github.com/vuejs/vuex/" target="_blank">vuex</a> for state management.
-    </p>
+    <div class="main">
+      <router-view></router-view>
+    </div>
+   
+    <div class="menubar">
+      <div class="item"><img src="./images/mbar.png" alt=""></div>
+      <div class="item"><img src="./images/mbar.png" alt=""></div>
+      <div class="item"><img src="./images/mbar.png" alt=""></div>
+    </div>
   </div>
 </template>
 
@@ -36,14 +25,39 @@ export default {
     }*/
   }
 }
+document.title="问答!!";
 </script>
 
 <style lang="less">
-html {
+html,body{
   height: 100%;
 }
-body{
-    background-color: red;
+#app{
+  // display: flex;
+  height: 619px;
+  overflow-x: hidden;
+  .main{
+    height: 100%;
+    // border: 1px solid black;
+    // background-color: #f0f0f0;
   }
+  .menubar{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-self:flex-end;
+    // border-top:1px solid black;
+    height: 48px;
+    width: 100%;
+    .item{
+      flex-grow:1;
+      // border: 1px solid black;
+      img{
+        height: 48px;
+      }
+    }
+  }
+} 
+
 
 </style>

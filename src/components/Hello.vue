@@ -1,14 +1,12 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
+  <p>110<span id="dd">222</span></p>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      msg: ' World!'
+      // msg: ' World!'
     }
   }
 }

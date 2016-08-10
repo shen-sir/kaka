@@ -4,30 +4,16 @@ import App from './App'
 // import menubar from './components/menubar.vue'
 Vue.use(VueRouter)
 
-var Foo = Vue.extend({
-    template: '<p>This is foo!</p>'
-})
 
-var Bar = Vue.extend({
-    template: '<p>This is bar!</p>'
-})
+const router = new VueRouter()
 
 
-// var App = Vue.extend({})
-
-var router = new VueRouter()
-
-/*new Vue({
-  el: 'body',
-  components: { menubar }
-})*/
-var vm = new Vue({
-	el:'',
-	data:{
-		a :1
-	}
-});
-/*router.map({
+router.map({
+	'/':{
+    	component: function (resolve) {
+      require(['./components/quesList.vue'], resolve)
+    }
+    },
     '/foo': {
         component: function (resolve) {
       require(['./App.vue'], resolve)
@@ -35,20 +21,16 @@ var vm = new Vue({
     },
     '/bar': {
         component: function (resolve) {
-      require(['./components/test.vue'], resolve)
-    }
-    },
-    '/menubar':{
-    	component: function (resolve) {
-      require(['./components/menubar.vue'], resolve)
+      require(['./components/Hello.vue'], resolve)
     }
     }
-})*/
+})
 
 
 
 
 router.start( App, '#app')
+// router.go('/bar')
 /*navigator.geolocation.getCurrentPosition(function(position){ alert(position.coords.latitude);alert(navigator.onLine);
 });*/
 
