@@ -5,27 +5,22 @@
     </div>
    
     <div class="menubar">
-      <div class="item"><img src="./images/mbar.png" alt=""></div>
-      <div class="item"><img src="./images/mbar.png" alt=""></div>
-      <div class="item"><img src="./images/mbar.png" alt=""></div>
+      <a v-link="{ path: '/' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
+      <a v-link="{ path: '/bar' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
+      <a v-link="{ path: '/foo' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
     </div>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+// import Hello from './components/Hello'
 // import test from './components/test.vue'
 // console.log(Hello)
 export default {
-  components: {
-    Hello/*,
-    test (a){
-      require(['./components/test.vue'],a)
-      
-    }*/
-  }
+  // components: {
+  //   Hello
+  // }
 }
-document.title="问答!!";
 </script>
 
 <style lang="less">
@@ -33,9 +28,10 @@ html,body{
   height: 100%;
 }
 #app{
+  padding-bottom: 50px;
   // display: flex;
-  height: 619px;
-  overflow-x: hidden;
+  // height: 619px;
+  // overflow-x: hidden;
   .main{
     height: 100%;
     // border: 1px solid black;
@@ -43,13 +39,15 @@ html,body{
   }
   .menubar{
     position: fixed;
+    z-index: 9999;
     bottom: 0;
     display: flex;
     align-self:flex-end;
+    background-color: white;
     // border-top:1px solid black;
     height: 48px;
     width: 100%;
-    .item{
+    a{
       flex-grow:1;
       // border: 1px solid black;
       img{
