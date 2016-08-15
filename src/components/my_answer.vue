@@ -1,5 +1,5 @@
 <template>
-		<div class="items my_answer" v-for="item in items">
+		<div class="items my_answer" v-for="item in items" v-link="{ path: '/answered' }">
 			<div class="qus">
 				<img src="../images/quest.png">
 				<span>在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前</span>

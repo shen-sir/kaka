@@ -6,7 +6,7 @@
 			</div>
 			<div class="video">
 				<div class="top">
-					<img src="../images/quest.png" >
+					<img src="../images/head.png" v-link="{ path: '/other_homepage' }">
 					<span class="name">罗永浩 | 锤子科技创始人</span>
 				</div>
 				<!-- video的poster属性的地址没有被顺利编译，所以要写static下已编译完加了hash值的地址，目录中无法看到 -->

@@ -1,31 +1,24 @@
 <template>
-		<div class="items my_questions" v-for="item in items">
-			<div class="qus" v-link="{ path: '/details_of_my_questions' }">
-				<img src="../images/quest.png">
-				<span><i>【私密】</i>在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前</span>
+		<div class="items my_read" v-for="item in items">
+			<div class="qus">
+				<img src="../images/head.png">
+				<span class="name">小意思 | 最牛设计师</span>
+			</div>
+			<div class="text">
+				<span>在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前</span>
 			</div>
 			<div class="video">
 				<div class="top">
 					<img src="../images/quest.png" >
 					<span class="name">罗永浩 | 锤子科技创始人</span>
-					<span class="status"><span class="money">￥200</span>&nbsp<span>待回答</span></span>
+					<span class="status"><span>偷看数：</span><span class="money">200</span></span>
 				</div>
 				<!-- video的poster属性的地址没有被顺利编译，所以要写static下已编译完加了hash值的地址，目录中无法看到 -->
 				<div class="vid">
 					<div class="ww"></div>
 					<video src="http://www.w3school.com.cn/i/movie.mp4" poster="" ></video>
-					<img src="../images/videobg.png" alt="">
 				</div>
 			</div>
-			<p class="info">
-					<span>14分钟前</span>
-					<span class="right">
-						<img class="eye" src="../images/eyes.png">
-						<span class="eye num">10750</span>&nbsp
-						<span>分成:</span>
-						<span class="num">￥50</span>
-					</span>
-			</p>
 		</div>
 		
 </template>
@@ -62,57 +55,41 @@ new JRoll("#wrapper")
 	// router.go('/bar')
 </script>
 <style lang='less'>
-	.items.my_questions{
+	.items.my_read{
 		margin: 0 auto;
 		background-color: white;
 		position: relative;
-		/*border: 1px solid red;*/
-		border-bottom: 10px solid #f0f0f0;
-		p.info{
-			width: 344px;
+		.qus{
 			margin: 0 auto;
-			padding-bottom: 16px;
-			font-size: 13px;
-			color: #b6b6b7;
-			.right{
-				float: right;
-				.num{
-					color: #87878a;
-				}
+			width: 344px;
+			margin-top: 15px;
+			span{
+				font-size: 15px;
+				display: inline-block;
+				line-height: 20px;
 			}
 			img{
-				vertical-align: text-top;
-				/*border: 1px solid black;*/
-				height: 15px;
+				display: inline-block;
+				width: 51px;
+				height: 51px;
+				vertical-align:top;
+				margin-top: -10px;
 			}
-			span.eye{
-					padding-left: 5px;
-				}
 		}
-		.qus{
-		margin: 0 auto;
-		width: 344px;
-		background-color: #fafafa;
-		margin-top: 15px;
-		span{
-			font-size: 15px;
-			padding: 5px 5px 5px 0;
-			width: 300px;
-			display: inline-block;
-			line-height: 20px;
-		}
-		img{
-			width: 28px;
-			height: 28px;
-			vertical-align:top;
-			margin-top: -10px;
-		}
-	}
-	.video{
+		.text{
+			width: 314px;
 			margin: 0 auto;
-			margin-top: 10px;
+			margin-top: -15px;
+			background-color: #fafafa;
+			border: 1px solid #f5f5f5;
+			border-radius: 8px;
+			padding: 15px;
+		}
+		.video{
+			margin: 0 auto;
+			margin-top: 25px;
 			width: 344px;
-			/*border: 1px solid black;*/
+			border-top: 1px dashed #e8e8e8; 
 			.top{
 				font-size: 14px;
 				position: relative;
@@ -134,7 +111,7 @@ new JRoll("#wrapper")
 			}
 			.vid{
 				.ww{
-					height: 175px;
+					height: 203px;
 				}
 				img{
 					position: absolute;
@@ -151,5 +128,5 @@ new JRoll("#wrapper")
 			
 		}
 	}
-
+	
 </style>

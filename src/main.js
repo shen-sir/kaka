@@ -36,6 +36,33 @@ router.map({
         component: function (resolve) {
 	      require(['./components/details_of_my_questions.vue'], resolve)
 	    }
+    },
+    'answered':{
+        component: function (resolve) {
+	      require(['./components/answered.vue'], resolve)
+	    }
+    },
+    'my_read':{
+        component: function (resolve) {
+	      require(['./components/my_read.vue'], resolve)
+	    }
+    },
+    'other_homepage':{
+    	 component: function (resolve) {
+	      require(['./components/other_homepage.vue'], resolve)
+	    },
+	    subRoutes:{
+	    	'/':{
+	    		component: function (resolve) {
+			      require(['./components/ask.vue'], resolve)
+			    }
+	    	},
+	    	'/right':{
+	    		component: function (resolve) {
+			      require(['./components/Big_shot.vue'], resolve)
+			    }
+	    	}
+	    }
     }
 })
 

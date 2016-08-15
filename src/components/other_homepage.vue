@@ -1,5 +1,5 @@
 <template>
-<div id="home">
+<div id="other_home">
 	<div class="head">
 		<div class="userimg">
 			<img class="usm" src="../images/head.png" >
@@ -20,27 +20,26 @@
 		</div>
 
 	</div>
-	<div class="money">
-		<p>未提现金额<span>￥15</span>，工作日每天17点结算，自动转入支付宝账户</p>
-		<a >填写支付宝账户</a>
-	</div>
-	<div class="menulist">
+	<div class="status">
 		<div class="item">
-			<span>我的提现</span>
-			<img src="../images/right.png" >
+			<p>106<span>&nbsp个</span></p>
+			<span class="type">答题</span>
 		</div>
-		<div class="item" v-link="{ path: '/my_question' }">
-			<span>我的提问</span>
-			<img src="../images/right.png" >
+		<div class="item">
+			<p>106<span>&nbsp次</span></p>
+			<span class="type">聊天</span>
 		</div>
-		<div class="item" v-link="{ path: '/my_answer' }" >
-			<span>我的回答</span>
-			<img src="../images/right.png" >
+		<div class="item" >
+			<p>106<span>&nbsp元</span></p>
+			<span class="type">收入</span>
 		</div>
-		<div class="item" v-link="{ path: '/my_read' }">
-			<span>我的偷看</span>
-			<img src="../images/right.png" >
+	</div>
+	<div class="list">
+		<div class="nav">
+			<span v-link="{ path: '/other_homepage/' }">他问(15)</span>
+			<span v-link="{ path: '/other_homepage/right' }">他答(15)</span>
 		</div>
+		<router-view></router-view>
 	</div>
 </div>
 </template>
@@ -62,7 +61,7 @@ export default {
 
 
 <style lang="less">
-#home .head{
+#other_home .head{
 	width: 100%;
 	height: 1.45rem;
 	background-color: #22b9ff;
@@ -80,6 +79,8 @@ export default {
 			border: .02rem solid #abe5ff;
 		}
 		.usv{
+			width: .19rem;
+			height: .19rem;
 			margin-top: .04rem;
 			vertical-align:top;
 			margin-left: -0.22rem;
@@ -115,39 +116,34 @@ export default {
 		}
 	}
 }
-#home .money{
+#other_home .status{
 	width: 100%;
 	text-align: center;
 	border-bottom: .10rem solid #f0f0f0;
 	padding-bottom: .20rem;
+	.item{
+		display: inline-block;
+		width: 32%;
 		p{
+			margin: 0.08rem 0.04rem 0;
 			span{
-				color: #ff9834;
+				font-size: 13px;
 			}
-			padding: 0 .32rem;
-			color: #bdbdbd;
-			text-align: center;
-			font-size: .14rem;
 		}
-		a{
-			border: 1px solid #ffbb79;
-			color: #ffbb79;
-			border-radius: .25rem;
-			padding: .09rem	.2rem;
-			display: inline-block;
-			margin-top: .14rem;
+		span.type{
+			padding-right: 4px;
+			font-size: 13px;	
+			color: #b5b5b5;
 		}
 	}
-#home .menulist{
-	padding-left: .14rem;
-	.item{
-		width: 100%;
-		padding: .14rem 0;
-		border-bottom: 1px solid #f8f8f8;
-		color: #3a3a3d;
-		img{
-			float: right;
-			margin-right: .15rem;
+}
+#other_home .list{
+	.nav{
+		text-align: center;
+		padding: 22px 0;
+		span{
+			width: 49%;
+			display: inline-block;
 		}
 	}
 }

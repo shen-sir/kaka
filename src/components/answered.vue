@@ -1,7 +1,11 @@
 <template>
-		<div class="items my_questions" v-for="item in items">
-			<div class="qus" v-link="{ path: '/details_of_my_questions' }">
-				<img src="../images/quest.png">
+		<div class="items answered">
+			<div class="qus">
+				<img src="../images/head.png">
+				<span class="name">小意思</span>
+				<span class="money">￥500</span>
+			</div>
+			<div class="text">
 				<span><i>【私密】</i>在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前</span>
 			</div>
 			<div class="video">
@@ -44,14 +48,7 @@ new JRoll("#wrapper")
 	module.exports={
 		data (){
 			return {
-				items:[
-			       {a:1},
-			       {a:1},
-			       {a:1},
-			       {a:1},
-			       {a:1},
-			       {a:1},
-		      	]
+				
 			}
 		}
 	}
@@ -62,12 +59,10 @@ new JRoll("#wrapper")
 	// router.go('/bar')
 </script>
 <style lang='less'>
-	.items.my_questions{
+	.items.answered{
 		margin: 0 auto;
 		background-color: white;
 		position: relative;
-		/*border: 1px solid red;*/
-		border-bottom: 10px solid #f0f0f0;
 		p.info{
 			width: 344px;
 			margin: 0 auto;
@@ -82,7 +77,6 @@ new JRoll("#wrapper")
 			}
 			img{
 				vertical-align: text-top;
-				/*border: 1px solid black;*/
 				height: 15px;
 			}
 			span.eye{
@@ -90,29 +84,43 @@ new JRoll("#wrapper")
 				}
 		}
 		.qus{
-		margin: 0 auto;
-		width: 344px;
-		background-color: #fafafa;
-		margin-top: 15px;
-		span{
-			font-size: 15px;
-			padding: 5px 5px 5px 0;
-			width: 300px;
-			display: inline-block;
-			line-height: 20px;
-		}
-		img{
-			width: 28px;
-			height: 28px;
-			vertical-align:top;
-			margin-top: -10px;
-		}
-	}
-	.video{
 			margin: 0 auto;
-			margin-top: 10px;
 			width: 344px;
-			/*border: 1px solid black;*/
+			margin-top: 15px;
+			span{
+				font-size: 15px;
+				display: inline-block;
+				line-height: 20px;
+			}
+			span.money{
+				color: #ff9e49;
+				float: right;
+			}
+			img{
+				display: inline-block;
+				width: 51px;
+				height: 51px;
+				vertical-align:top;
+				margin-top: -10px;
+			}
+		}
+		.text{
+			width: 314px;
+			margin: 0 auto;
+			margin-top: -15px;
+			background-color: #fafafa;
+			border: 1px solid #f5f5f5;
+			border-radius: 8px;
+			padding: 15px;
+			i{
+				color: #ff0000;
+			}
+		}
+		.video{
+			margin: 0 auto;
+			margin-top: 25px;
+			width: 344px;
+			border-top: 1px dashed #e8e8e8; 
 			.top{
 				font-size: 14px;
 				position: relative;
@@ -151,5 +159,5 @@ new JRoll("#wrapper")
 			
 		}
 	}
-
+	
 </style>
