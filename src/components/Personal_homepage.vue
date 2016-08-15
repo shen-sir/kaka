@@ -29,11 +29,11 @@
 			<span>我的提现</span>
 			<img src="../images/right.png" >
 		</div>
-		<div class="item">
+		<div class="item" v-link="{ path: '/my_question' }">
 			<span>我的提问</span>
 			<img src="../images/right.png" >
 		</div>
-		<div class="item">
+		<div class="item" v-link="{ path: '/my_answer' }" >
 			<span>我的回答</span>
 			<img src="../images/right.png" >
 		</div>
