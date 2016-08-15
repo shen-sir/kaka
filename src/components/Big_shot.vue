@@ -4,7 +4,7 @@
     <div class="item">
       <img src="../images/head.png">
       <img src="../images/vicon.png">
-      <span>罗永浩</span>
+      <span v-on:click="set">push botton</span>
     </div>
     <div class="item">
       <img src="../images/head.png">
@@ -50,70 +50,7 @@
       <hr>    
   </div>
   <div class="transverse">
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>  
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>  
-    <div class="item">
+    <div class="item" v-for="item in items">
       <div class="outer">
         <img src="../images/head.png">  
       </div>
@@ -126,70 +63,7 @@
       <hr>    
   </div>
   <div class="transverse">
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>  
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>  
-    <div class="item">
+    <div class="item" v-for="item in items">
       <div class="outer">
         <img src="../images/head.png">  
       </div>
@@ -202,70 +76,7 @@
       <hr>    
   </div>
   <div class="transverse">
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>  
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>
-    <div class="item">
-      <div class="outer">
-        <img src="../images/head.png">  
-      </div>
-      <p>罗永浩</p>
-      <span>资深媒体人于传播砖家</span>
-    </div>  
-    <div class="item">
+    <div class="item" v-for="item in items">
       <div class="outer">
         <img src="../images/head.png">  
       </div>
@@ -286,6 +97,11 @@ export default {
         {a:1},
         {a:1},
       ]
+    }
+  },
+  methods :{
+    set (){
+      this.items.push({b:2})
     }
   }
 }

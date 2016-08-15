@@ -6,8 +6,8 @@
    
     <div class="menubar">
       <a v-link="{ path: '/' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
-      <a v-link="{ path: '/bar' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
-      <a v-link="{ path: '/foo' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
+      <a v-link="{ path: '/big_shot' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
+      <a v-link="{ path: '/personal_homepage' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
     </div>
   </div>
 </template>

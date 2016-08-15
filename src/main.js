@@ -12,15 +12,30 @@ router.map({
       require(['./components/quesList.vue'], resolve)
     }
     },
-    '/bar': {
+    '/big_shot': {
         component: function (resolve) {
-      require(['./components/Big_shot.vue'], resolve)
-    }
+	      require(['./components/Big_shot.vue'], resolve)
+	    }
     },
-    '/foo': {
+    '/personal_homepage': {
         component: function (resolve) {
-      require(['./components/Personal_homepage.vue'], resolve)
-    }
+	      require(['./components/Personal_homepage.vue'], resolve)
+	    }
+    },
+    '/my_question': {
+        component: function (resolve) {
+	      require(['./components/my_question.vue'], resolve)
+	    }
+    },
+    '/my_answer': {
+        component: function (resolve) {
+	      require(['./components/my_answer.vue'], resolve)
+	    }
+    },
+    '/details_of_my_questions':{
+        component: function (resolve) {
+	      require(['./components/details_of_my_questions.vue'], resolve)
+	    }
     }
 })
 
