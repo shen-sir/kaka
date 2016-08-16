@@ -39,21 +39,45 @@
 			<span v-link="{ path: '/other_homepage/' }">他问(15)</span>
 			<span v-link="{ path: '/other_homepage/right' }">他答(15)</span>
 		</div>
+		<!-- 子路由 -->
 		<router-view></router-view>
+	</div>
+	<div class="put_questions" v-link="{ path: '/input_problem' }">
+		<p>向他提问&nbsp￥ <span>50</span></p>
 	</div>
 </div>
 </template>
 
 <script>
+//暴露data函数接口，返回本组件的vue选项
 export default {
   data () {
     return {
-      items:[
-        {a:1},
-        {a:1},
-        {a:1},
-        {a:1},
-      ]
+    	button:true,
+      	items:[
+	        {a:1},
+	        {a:1},
+	        {a:1},
+	        {a:1},
+	      ]
+	    }
+  },
+  route: {//路由选项
+    activate: function (transition) {
+      console.log('hook-example activated!')
+      //当路由停用当前组件,向父组件派发事件,隐藏菜单
+      this.$dispatch('show-menu', false)
+      // alert(document.title)
+      document.title = '个人主页';
+      // alert(document.title)
+      //调用此函数处理切换过程的下一步
+      transition.next()
+    },
+    deactivate: function (transition) {
+      console.log('hook-example deactivated!')
+      //当路由停用当前组件,向父组件派发事件,显示菜单
+      this.$dispatch('show-menu', true)
+      transition.next()
     }
   }
 }
@@ -145,6 +169,20 @@ export default {
 			width: 49%;
 			display: inline-block;
 		}
+	}
+}
+#other_home .put_questions{
+	width: 100%;
+	height: 50px;
+	background-color: #34bbfc;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	z-index: 9999;
+	p{
+		margin: 0;
+		line-height: 50px;
+		color: white;
 	}
 }
 </style>

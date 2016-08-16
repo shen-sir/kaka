@@ -4,7 +4,7 @@
       <router-view></router-view>
     </div>
    
-    <div class="menubar">
+    <div class="menubar" v-show='button'>
       <a v-link="{ path: '/' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
       <a v-link="{ path: '/big_shot' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
       <a v-link="{ path: '/personal_homepage' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
@@ -17,9 +17,16 @@
 // import test from './components/test.vue'
 // console.log(Hello)
 export default {
-  // components: {
-  //   Hello
-  // }
+  data () {
+    return {
+        button:true
+      }
+  },
+  events:{//监听事件，等待派发
+    'show-menu' (msg){
+      this.button = msg;
+    }
+  }
 }
 </script>
 
@@ -30,7 +37,7 @@ html,body{
 #app{
   padding-bottom: 50px;
   // display: flex;
-  // height: 619px;
+  // height: 100%;
   // overflow-x: hidden;
   .main{
     height: 100%;
@@ -52,6 +59,7 @@ html,body{
       // border: 1px solid black;
       img{
         height: 48px;
+        margin-left: 40px;
       }
     }
   }

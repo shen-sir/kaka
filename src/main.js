@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App'
-
+//应用组件
 Vue.use(VueRouter)
 const router = new VueRouter()
 
@@ -9,6 +9,7 @@ const router = new VueRouter()
 router.map({
 	'/':{
     	component: function (resolve) {
+    		//webpack分割代码，异步加载组件
       require(['./components/quesList.vue'], resolve)
     }
     },
@@ -37,20 +38,21 @@ router.map({
 	      require(['./components/details_of_my_questions.vue'], resolve)
 	    }
     },
-    'answered':{
+    '/answered':{
         component: function (resolve) {
 	      require(['./components/answered.vue'], resolve)
 	    }
     },
-    'my_read':{
+    '/my_read':{
         component: function (resolve) {
 	      require(['./components/my_read.vue'], resolve)
 	    }
     },
-    'other_homepage':{
+    '/other_homepage':{
     	 component: function (resolve) {
 	      require(['./components/other_homepage.vue'], resolve)
 	    },
+	    //自路由
 	    subRoutes:{
 	    	'/':{
 	    		component: function (resolve) {
@@ -62,6 +64,21 @@ router.map({
 			      require(['./components/Big_shot.vue'], resolve)
 			    }
 	    	}
+	    }
+    },
+    '/input_problem':{
+        component: function (resolve) {
+	      require(['./components/input_problem.vue'], resolve)
+	    }
+    },
+    '/account':{
+        component: function (resolve) {
+	      require(['./components/account.vue'], resolve)
+	    }
+    },
+    '/edit':{
+    	component: function (resolve) {
+	      require(['./components/edit.vue'], resolve)
 	    }
     }
 })

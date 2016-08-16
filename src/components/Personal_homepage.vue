@@ -2,7 +2,7 @@
 <div id="home">
 	<div class="head">
 		<div class="userimg">
-			<img class="usm" src="../images/head.png" >
+			<img class="usm" src="../images/head.png" v-link="{ path: '/edit' }">
 			<img class="usv" src="../images/userV.png" >
 		</div>
 		<div class="name">
@@ -22,7 +22,7 @@
 	</div>
 	<div class="money">
 		<p>未提现金额<span>￥15</span>，工作日每天17点结算，自动转入支付宝账户</p>
-		<a >填写支付宝账户</a>
+		<a v-link="{ path: '/account' }">填写支付宝账户</a>
 	</div>
 	<div class="menulist">
 		<div class="item">
@@ -133,6 +133,7 @@ export default {
 			border: 1px solid #ffbb79;
 			color: #ffbb79;
 			border-radius: .25rem;
+			text-decoration:none;
 			padding: .09rem	.2rem;
 			display: inline-block;
 			margin-top: .14rem;
