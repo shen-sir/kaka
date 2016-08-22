@@ -10,14 +10,14 @@
 			</div>
 			<div class="video">
 				<div class="top">
-					<img src="../images/quest.png" >
+					<img src="../images/head.png" >
 					<span class="name">罗永浩 | 锤子科技创始人</span>
 					<span class="status"><span class="money">￥200</span>&nbsp<span>待回答</span></span>
 				</div>
 				<!-- video的poster属性的地址没有被顺利编译，所以要写static下已编译完加了hash值的地址，目录中无法看到 -->
 				<div class="vid">
 					<div class="ww"></div>
-					<video src="http://www.w3school.com.cn/i/movie.mp4" poster="" ></video>
+					<video src="http://www.w3school.com.cn/i/movie.mp4" poster="" controls="controls"></video>
 					<img src="../images/videobg.png" alt="">
 				</div>
 			</div>
@@ -34,17 +34,6 @@
 		
 </template>
 <script>
-/*  ****jroll test  */
-/*const JRoll = require('./jroll.js');
-window.onload=function(){
-// 	var b = document.querySelector("#wrapper");
-// console.log(b)
-new JRoll("#wrapper")
-}*/
-
-// var jroll = new JRoll("#wrapper",'#scroller');
-// jroll.infinite();
-/*  ****  */
 	module.exports={
 		data (){
 			return {
@@ -100,6 +89,7 @@ new JRoll("#wrapper")
 				display: inline-block;
 				width: 51px;
 				height: 51px;
+				border-radius: 100%;
 				vertical-align:top;
 				margin-top: -10px;
 			}
@@ -142,18 +132,28 @@ new JRoll("#wrapper")
 			}
 			.vid{
 				.ww{
-					height: 175px;
+					height: 170px;
 				}
 				img{
 					position: absolute;
 					bottom: 42.5px;
+					height: 174px;
 				}
 				video{
 					position: absolute;
 					bottom: 42.5px;
-					width: 344px;
-					height: 175px;
+					width: 345px;
+					border-radius: 6px;
+					height: 174px;
 					background-color: #717171;
+				}
+				span{
+					position: absolute;
+					top :293px;
+					left: 182px;
+					vertical-align: middle;
+					color: white;
+					font-size: 14px;
 				}
 			}
 			

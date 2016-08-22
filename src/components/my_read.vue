@@ -9,14 +9,14 @@
 			</div>
 			<div class="video">
 				<div class="top">
-					<img src="../images/quest.png" >
+					<img src="../images/head.png" >
 					<span class="name">罗永浩 | 锤子科技创始人</span>
 					<span class="status"><span>偷看数：</span><span class="money">200</span></span>
 				</div>
 				<!-- video的poster属性的地址没有被顺利编译，所以要写static下已编译完加了hash值的地址，目录中无法看到 -->
 				<div class="vid">
 					<div class="ww"></div>
-					<video src="http://www.w3school.com.cn/i/movie.mp4" poster="" ></video>
+					<video src="http://www.w3school.com.cn/i/movie.mp4" poster="" controls="controls"></video>
 				</div>
 			</div>
 		</div>
@@ -74,6 +74,7 @@ new JRoll("#wrapper")
 				height: 51px;
 				vertical-align:top;
 				margin-top: -10px;
+				border-radius: 100%;
 			}
 		}
 		.text{

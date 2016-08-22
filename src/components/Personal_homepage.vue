@@ -3,7 +3,7 @@
 	<div class="head">
 		<div class="userimg">
 			<img class="usm" src="../images/head.png" v-link="{ path: '/edit' }">
-			<img class="usv" src="../images/userV.png" >
+			<img class="usv" src="../images/vicon.png" >
 		</div>
 		<div class="name">
 			<p>
@@ -80,6 +80,8 @@ export default {
 			border: .02rem solid #abe5ff;
 		}
 		.usv{
+			width: .20rem;
+			height: .19rem;
 			margin-top: .04rem;
 			vertical-align:top;
 			margin-left: -0.22rem;

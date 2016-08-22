@@ -12,8 +12,9 @@
 				<!-- video的poster属性的地址没有被顺利编译，所以要写static下已编译完加了hash值的地址，目录中无法看到 -->
 				<div class="vid">
 					<div class="ww"></div>
-					<video src="http://www.w3school.com.cn/i/movie.mp4" poster="" ></video>
+					<video src="http://www.w3school.com.cn/i/movie.mp4" poster="" controls="controls"></video>
 					<img src="../images/videobg.png" alt="">
+					<span>2元偷偷看</span>
 				</div>
 			</div>
 			<p class="info">
@@ -22,8 +23,6 @@
 						<img class="eye" src="../images/eyes.png">
 						<span class="eye">10750</span>
 					</span>
-					
-					
 				</p>
 		</div>
 		
@@ -97,6 +96,7 @@ new JRoll("#wrapper")
 			line-height: 20px;
 		}
 		img{
+			height: 28px;
 			vertical-align:top;
 			margin-top: -10px;
 		}
@@ -122,18 +122,28 @@ new JRoll("#wrapper")
 			}
 			.vid{
 				.ww{
-					height: 175px;
+					height: 170px;
 				}
 				img{
 					position: absolute;
 					bottom: 42.5px;
+					height: 174px;
 				}
 				video{
 					position: absolute;
 					bottom: 42.5px;
-					width: 344px;
-					height: 175px;
+					width: 345px;
+					border-radius: 6px;
+					height: 174px;
 					background-color: #717171;
+				}
+				span{
+					position: absolute;
+					top :293px;
+					left: 182px;
+					vertical-align: middle;
+					color: white;
+					font-size: 14px;
 				}
 			}
 			

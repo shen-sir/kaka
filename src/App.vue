@@ -62,6 +62,13 @@ html,body{
         margin-left: 40px;
       }
     }
+    a:active{
+      background-color: white;
+    }
+    a:focus{
+      outline: 0 white;
+      background-color: white;
+    }
   }
 } 
 

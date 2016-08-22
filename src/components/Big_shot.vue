@@ -1,34 +1,34 @@
 <template>
-<div id="big-shot">
+<div id="big-shot" v-cloak>
   <div class="bigV">
     <div class="item">
       <img src="../images/head.png">
-      <img src="../images/vicon.png">
+      <img class="biv" src="../images/vicon.png">
       <span v-on:click="set">push botton</span>
     </div>
     <div class="item">
       <img src="../images/head.png">
-      <img src="../images/vicon.png">
+      <img class="biv" src="../images/vicon.png">
       <span>罗永浩</span>
     </div>
     <div class="item">
       <img src="../images/head.png">
-      <img src="../images/vicon.png">
+      <img class="biv" src="../images/vicon.png">
       <span>罗永浩</span>
     </div>
     <div class="item">
       <img src="../images/head.png">
-      <img src="../images/vicon.png">
+      <img class="biv" src="../images/vicon.png">
       <span>罗永浩</span>
     </div>
     <div class="item">
       <img src="../images/head.png">
-      <img src="../images/vicon.png">
+      <img class="biv" src="../images/vicon.png">
       <span>罗永浩</span>
     </div>
     <div class="item">
       <img src="../images/head.png">
-      <img src="../images/vicon.png">
+      <img class="biv" src="../images/vicon.png">
       <span>罗永浩</span>
     </div>
   </div>
@@ -112,7 +112,7 @@ window.onload=function(){
   headicon.style.border = "2px solid black"*/
 // elposition(headicon[0],0,0)
 }
-alert(1)
+// alert(1)
 
 // function elposition(el,top,left){
 //   el.style.border = 'red';
@@ -123,6 +123,9 @@ alert(1)
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
+[v-cloak] {
+  display: none;
+}
 .bigV{
   width: 100%;
   height: 2.78rem;
@@ -138,11 +141,16 @@ alert(1)
       margin: 0 auto;
       display: block;
     }
+    .biv{
+      width: .20rem;
+      height: .19rem;
+    }
     img{
       margin-top: -.11rem;
     }
     img:first-child{
       width: .60rem;
+      height: .60rem;
       border-radius: 100%;
       border: .03rem solid #dfdfdf;
     }

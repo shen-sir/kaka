@@ -17,7 +17,7 @@
 				<!-- video的poster属性的地址没有被顺利编译，所以要写static下已编译完加了hash值的地址，目录中无法看到 -->
 				<div class="vid">
 					<div class="ww"></div>
-					<video src="http://www.w3school.com.cn/i/movie.mp4" poster="" ></video>
+					<video src="http://www.w3school.com.cn/i/movie.mp4" poster="" controls="controls"></video>
 					<img src="../images/videobg.png" alt="">
 				</div>
 			</div>
