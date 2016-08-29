@@ -25,7 +25,7 @@
 		<a v-link="{ path: '/account' }">填写支付宝账户</a>
 	</div>
 	<div class="menulist">
-		<div class="item">
+		<div class="item" @click='increment'>
 			<span>我的提现</span>
 			<img src="../images/right.png" >
 		</div>
@@ -46,6 +46,7 @@
 </template>
 
 <script>
+import { incrementCounter } from '../vuex/actions'
 export default {
   data () {
     return {
@@ -55,6 +56,11 @@ export default {
         {a:1},
         {a:1},
       ]
+    }
+  },
+  vuex: {
+    actions: {
+      increment: incrementCounter
     }
   }
 }

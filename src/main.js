@@ -4,6 +4,15 @@ import App from './App'
 //应用组件
 Vue.use(VueRouter)
 const router = new VueRouter()
+// http://xiugr.com/?code=031G5ll62g0O4G0xt7l62qYrl62G5llN&state=
+var ll = window.location.href
+alert(ll)
+// window.location.href.split("?")[1].split("=",1) != "code"
+if (!window.location.href.split("?")[1]) {
+    window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx49b69516e91e8565&redirect_uri=http%3A%2F%2Fxiugr.com&response_type=code&scope=snsapi_userinfo#wechat_redirect"
+}
+alert(window.location.href.split("?")[1].split("=",2))
+
 
 //路由配置
 router.map({

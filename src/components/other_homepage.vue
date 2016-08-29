@@ -43,12 +43,13 @@
 		<router-view></router-view>
 	</div>
 	<div class="put_questions" v-link="{ path: '/input_problem' }">
-		<p>向他提问&nbsp￥ <span>50</span></p>
+		<p>向他提问&nbsp￥ <span>50{{counterValue}}</span></p>
 	</div>
 </div>
 </template>
 
 <script>
+import { getCount } from '../vuex/getters'
 //暴露data函数接口，返回本组件的vue选项
 export default {
   data () {
@@ -78,6 +79,12 @@ export default {
       //当路由停用当前组件,向父组件派发事件,显示菜单
       this.$dispatch('show-menu', true)
       transition.next()
+    }
+  },
+  vuex: {
+    getters: {
+      // 注意在这里你需要 `getCount` 函数本身而不是它的执行结果 'getCount()'
+      counterValue: getCount
     }
   }
 }
