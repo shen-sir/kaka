@@ -38,7 +38,9 @@ import { getHome_ask_list } from '../vuex/getters'
 		},
 		route:{
 			activate (done){
+				/*这里使用的router钩子，与vue组件钩子用法不同，虽然同名*/
 				/*可以在这里使用HTTP，在success里dispatch更改state，最后.next()*/
+
 				window.setTimeout(function(){
 					done.next();
 				},5000)
@@ -51,6 +53,16 @@ import { getHome_ask_list } from '../vuex/getters'
 			      return state.Home_ask_list
 			    }
 	      	}
+	    },
+	    ready() {
+
+	      // GET /someUrl
+	      this.$http.get('/someUrl').then((response) => {
+	          // success callback
+	      }, (response) => {
+	          // error callback
+	      });
+
 	    }
 	}
 /*	window.onload=function(){

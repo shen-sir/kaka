@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App'
+import VueResource from 'vue-resource'
+
+
 //应用组件
 Vue.use(VueRouter)
+Vue.use(VueResource)
 const router = new VueRouter()
 
 //路由配置
