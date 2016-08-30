@@ -28,38 +28,39 @@
 		
 </template>
 <script>
-/*  ****jroll test  */
-/*const JRoll = require('./jroll.js');
-window.onload=function(){
-// 	var b = document.querySelector("#wrapper");
-// console.log(b)
-new JRoll("#wrapper")
-}*/
+import { getHome_ask_list } from '../vuex/getters'
 
-// var jroll = new JRoll("#wrapper",'#scroller');
-// jroll.infinite();
-/*  ****  */
 	module.exports={
 		data (){
 			return {
-				items:[
-			       {a:1},
-			       {a:1},
-			       {a:1},
-			       {a:1},
-			       {a:1},
-			       {a:1},
-		      	]
+				items:this.list
 			}
-		}
+		},
+		route:{
+			activate (done){
+				/*可以在这里使用HTTP，在success里dispatch更改state，最后.next()*/
+				window.setTimeout(function(){
+					done.next();
+				},5000)
+			}
+		},
+		vuex: {
+	    	getters: {
+		        // 注意在这里你需要 `getCount` 函数本身而不是它的执行结果 'getCount()'
+		        list: function (state) {
+			      return state.Home_ask_list
+			    }
+	      	}
+	    }
 	}
-	window.onload=function(){
+/*	window.onload=function(){
 		document.title = '问答';
-	}
+	}*/
 	
 	// router.go('/bar')
 </script>
 <style lang='less'>
+/*数据未渲染样式*/
 [v-cloak] {
   display: none;
 }

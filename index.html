@@ -19,6 +19,9 @@ body{
   </style>
   <body >
     <script>
+    if (!window.location.href.split("?")[1]) {
+    window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx49b69516e91e8565&redirect_uri=http%3A%2F%2Fxiugr.com&response_type=code&scope=snsapi_userinfo#wechat_redirect"
+}
     // alert(1)
     //ajax
 /*var request = new XMLHttpRequest();
@@ -37,16 +40,9 @@ request.onload = function() {
 
   }
 };
-request.send(null);
-*/
-/*function handleResponse(response){
-  // console.log(response)
-  alert(1)
+request.send(null);*/
 
-}
-var script = document.createElement("script");
-script.src = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx49b69516e91e8565&secret=11c48fc1a2db280ab7e790a2a0f493d3"; 
-document.body.insertBefore(script, document.body.firstChild);*/
+
       
     </script>
   	<div id="app"></div>
