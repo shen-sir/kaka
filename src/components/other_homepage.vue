@@ -66,7 +66,7 @@ export default {
   route: {//路由选项
     activate: function (transition) {
       console.log('hook-example activated!')
-      //当路由停用当前组件,向父组件派发事件,隐藏菜单
+      //当路由停用当前组件,向父组件派发事件,隐藏菜单，这里的$dispatch有$,与vuex中不同
       this.$dispatch('show-menu', false)
       // alert(document.title)
       document.title = '个人主页';
@@ -76,7 +76,7 @@ export default {
     },
     deactivate: function (transition) {
       console.log('hook-example deactivated!')
-      //当路由停用当前组件,向父组件派发事件,显示菜单
+      //当路由停用当前组件,向父组件派发事件,显示菜单，这里的$dispatch有$,与vuex中不同
       this.$dispatch('show-menu', true)
       transition.next()
     }

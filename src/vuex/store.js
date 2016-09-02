@@ -9,15 +9,8 @@ const state = {
   // 用户类
   user:{},
   // 首页问答列表
-  Home_ask_list:[
-    {a:1},
-    {a:1},
-    {a:1},
-    {a:1},
-    {a:1},
-    {a:1},
-  ],
-  count: 0
+  Home_ask_list:[],
+  count: 0// 这一条是测试
 }
 
 // 创建一个对象存储一系列 mutation 函数
@@ -26,11 +19,18 @@ const mutations = {
   // mutation 的第一个参数是当前的 state
   // 你可以在函数里修改 state
   INCREMENT (state, amount) {
+    // 这一条是测试
     state.count = state.count + amount
   },
+  // 首页问答列表
   HOME_ASK_LIST (state, data) {
-    state.Home_ask_list = state.Home_ask_list.push(data)
+    debugger;
+    for(let i = 0;i<data.data.result.questions.length;i++){
+      state.Home_ask_list.push(data.data.result.questions[i])
+    }
+    console.log(state.Home_ask_list)
   },
+  // 登录用户信息
   USER (state, data) {
     state.user = data
   }

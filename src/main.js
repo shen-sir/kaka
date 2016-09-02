@@ -7,6 +7,7 @@ import VueResource from 'vue-resource'
 //应用组件
 Vue.use(VueRouter)
 Vue.use(VueResource)
+Vue.config.debug = true;
 const router = new VueRouter()
 
 //路由配置
