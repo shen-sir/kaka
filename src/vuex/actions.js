@@ -15,3 +15,10 @@ export const inuser = function ({ dispatch, state },data) {
 	// alert(1);
   	dispatch('USER', data)
 }
+// 大V
+export const inhotuser = function ({ dispatch, state },data) {
+	// alert(1);
+	
+	// debugger;
+  	dispatch('HOTUSER', data)
+}

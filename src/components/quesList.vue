@@ -2,7 +2,7 @@
 		<div class="items quest" v-for="item in items" >
 			<div class="qus">
 				<img src="../images/quest.png">
-				<span>在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前</span>
+				<span>{{item.description}}</span>
 			</div>
 			<div class="video">
 				<div class="top">
@@ -21,7 +21,7 @@
 					<span>14分钟前</span>
 					<span class="right">
 						<img class="eye" src="../images/eyes.png">
-						<span class="eye">10750</span>
+						<span class="eye">{{item.viewTimes}}</span>
 					</span>		
 			</p>
 		</div>
@@ -35,15 +35,16 @@ import { inhome_ask_list } from '../vuex/actions'
 	module.exports={
 		data (){
 			return {
-				items:this.list
+				items:this.list,
+				pages:2,
 			}
 		},
 		route:{
 			activate (done){
 				/*这里使用的router钩子，与vue组件钩子用法不同，虽然同名*/
 				/*可以在这里使用HTTP，当切入组简时再次请求，在success里dispatch更改state，最后.next()*/
-				
-				this.getLIst(1,20,1,()=>{done.next()})
+				// 当组件切换时传入.next()请求完成后继续渲染
+				this.getLIst(1,20,this.pages,()=>{done.next()})
 			}
 		},
 		methods:{
@@ -54,6 +55,7 @@ import { inhome_ask_list } from '../vuex/actions'
 			        // 当router钩子调用时需要的.next()传参
 			        this.ask_list(response);
 			        // debugger;
+			        // 当页面第一次渲染时没有传入函数
 			        if(typeof fn != "undefined"){
 			        	fn()
 			        }
@@ -66,11 +68,8 @@ import { inhome_ask_list } from '../vuex/actions'
 		vuex: {
 	    	getters: {
 		        // 注意在这里你需要 `getCount` 函数本身而不是它的执行结果 'getCount()'
-		        list: function (state) {
-		        	// debugger;
-		        	console.log(state.Home_ask_list)
-			      return state.Home_ask_list
-			    }
+		        // 首页问答列表
+		        list: getHome_ask_list
 	      	},
 	      	actions: {
 		      	user: inuser,
@@ -80,6 +79,7 @@ import { inhome_ask_list } from '../vuex/actions'
 	    // 生命周期，在实例开始初始化时同步调用,init钩子调用时并没有初始化时间处理器所以这里不能调用methods
 	    init(){
 	    	var code = '';
+	    	// 只有当第一次授权时执行
 	    	if (!window.location.href.split("?")[1]) {
 			    window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx49b69516e91e8565&redirect_uri=http%3A%2F%2Fxiugr.com&response_type=code&scope=snsapi_userinfo#wechat_redirect";
 			    code = window.location.href.split('code=')[1].split('&')[0];
@@ -96,7 +96,6 @@ import { inhome_ask_list } from '../vuex/actions'
 			
 	    },
 	    ready() {
-		    // GET /someUrl
 		    // this.getLIst();
 		    
 	    }
@@ -146,7 +145,6 @@ import { inhome_ask_list } from '../vuex/actions'
 			line-height: .20rem;
 		}
 		img{
-			/*width: 28rem;*/
 			height: 0.28rem;
 			vertical-align:top;
 			margin-top: -0.10rem;
