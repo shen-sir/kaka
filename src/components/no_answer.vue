@@ -1,5 +1,5 @@
 <template>
-		<div class="items details_of_my_questions">
+		<div class="items no_answer">
 			<div class="qus">
 				<img src="../images/head.png">
 				<span class="name">小意思</span>
@@ -9,27 +9,8 @@
 				<span><i>【私密】</i>在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前在创立锤子科技之前</span>
 			</div>
 			<div class="video">
-				<div class="top">
-					<img src="../images/quest.png" >
-					<span class="name">罗永浩 | 锤子科技创始人</span>
-					<span class="status"><span class="money">￥200</span>&nbsp<span>待回答</span></span>
-				</div>
-				<!-- video的poster属性的地址没有被顺利编译，所以要写static下已编译完加了hash值的地址，目录中无法看到 -->
-				<div class="vid">
-					<div class="ww"></div>
-					<video src="http://www.w3school.com.cn/i/movie.mp4" poster="" controls="controls"></video>
-					<img src="../images/videobg.png" alt="">
-				</div>
+				
 			</div>
-			<p class="info">
-					<span>14分钟前</span>
-					<span class="right">
-						<img class="eye" src="../images/eyes.png">
-						<span class="eye num">10750</span>&nbsp
-						<span>分成:</span>
-						<span class="num">￥50</span>
-					</span>
-			</p>
 		</div>
 		
 </template>
@@ -59,7 +40,7 @@ new JRoll("#wrapper")
 	// router.go('/bar')
 </script>
 <style lang='less'>
-	.items.details_of_my_questions{
+	.items.no_answer{
 		margin: 0 auto;
 		background-color: white;
 		position: relative;

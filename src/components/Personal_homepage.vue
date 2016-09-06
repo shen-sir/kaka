@@ -2,8 +2,8 @@
 <div id="home">
 	<div class="head">
 		<div class="userimg">
-			<img class="usm" src="../images/head.png" >
-			<img class="usv" src="../images/userV.png" >
+			<img class="usm" src="../images/head.png" v-link="{ path: '/edit' }">
+			<img class="usv" src="../images/vicon.png" >
 		</div>
 		<div class="name">
 			<p>
@@ -22,10 +22,10 @@
 	</div>
 	<div class="money">
 		<p>未提现金额<span>￥15</span>，工作日每天17点结算，自动转入支付宝账户</p>
-		<a >填写支付宝账户</a>
+		<a v-link="{ path: '/account' }">填写支付宝账户</a>
 	</div>
 	<div class="menulist">
-		<div class="item">
+		<div class="item" @click='increment'>
 			<span>我的提现</span>
 			<img src="../images/right.png" >
 		</div>
@@ -37,7 +37,7 @@
 			<span>我的回答</span>
 			<img src="../images/right.png" >
 		</div>
-		<div class="item">
+		<div class="item" v-link="{ path: '/my_read' }">
 			<span>我的偷看</span>
 			<img src="../images/right.png" >
 		</div>
@@ -46,6 +46,7 @@
 </template>
 
 <script>
+import { incrementCounter } from '../vuex/actions'
 export default {
   data () {
     return {
@@ -55,6 +56,11 @@ export default {
         {a:1},
         {a:1},
       ]
+    }
+  },
+  vuex: {
+    actions: {
+      increment: incrementCounter
     }
   }
 }
@@ -80,6 +86,8 @@ export default {
 			border: .02rem solid #abe5ff;
 		}
 		.usv{
+			width: .20rem;
+			height: .19rem;
 			margin-top: .04rem;
 			vertical-align:top;
 			margin-left: -0.22rem;
@@ -133,6 +141,7 @@ export default {
 			border: 1px solid #ffbb79;
 			color: #ffbb79;
 			border-radius: .25rem;
+			text-decoration:none;
 			padding: .09rem	.2rem;
 			display: inline-block;
 			margin-top: .14rem;

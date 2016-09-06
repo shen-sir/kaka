@@ -4,7 +4,7 @@
       <router-view></router-view>
     </div>
    
-    <div class="menubar">
+    <div class="menubar" v-show='button'>
       <a v-link="{ path: '/' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
       <a v-link="{ path: '/big_shot' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
       <a v-link="{ path: '/personal_homepage' }"><div class="item"><img src="./images/mbar.png" alt=""></div></a>
@@ -13,13 +13,21 @@
 </template>
 
 <script>
+import store from './vuex/store'
 // import Hello from './components/Hello'
 // import test from './components/test.vue'
-// console.log(Hello)
 export default {
-  // components: {
-  //   Hello
-  // }
+  data () {
+    return {
+        button:true
+      }
+  },
+  events:{//监听事件，等待派发(父子组件通信)
+    'show-menu' (msg){
+      this.button = msg;
+    }
+  },
+  store
 }
 </script>
 
@@ -29,13 +37,8 @@ html,body{
 }
 #app{
   padding-bottom: 50px;
-  // display: flex;
-  // height: 619px;
-  // overflow-x: hidden;
   .main{
     height: 100%;
-    // border: 1px solid black;
-    // background-color: #f0f0f0;
   }
   .menubar{
     position: fixed;
@@ -44,15 +47,21 @@ html,body{
     display: flex;
     align-self:flex-end;
     background-color: white;
-    // border-top:1px solid black;
     height: 48px;
     width: 100%;
     a{
       flex-grow:1;
-      // border: 1px solid black;
       img{
         height: 48px;
+        margin-left: 40px;
       }
+    }
+    a:active{
+      background-color: white;
+    }
+    a:focus{
+      outline: 0 white;
+      background-color: white;
     }
   }
 } 
